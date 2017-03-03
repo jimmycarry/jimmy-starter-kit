@@ -1,1 +1,1 @@
-web: npm run start
+web: SECRET_KEY=production npm run start
