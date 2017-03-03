@@ -154,14 +154,14 @@
   "scripts": {
     "backend:build": "./scripts/backend-build",
     "backend:watch": "./scripts/backend-watch",
-    "build": "yarn run clean && (yarn run compile-templates & yarn run frontend:build & yarn run backend:build)",
+    "build": "npm run clean && (npm run compile-templates & npm run frontend:build & npm run backend:build)",
     "clean": "node ./scripts/clean.js",
     "compile-templates": "markoc ./app/server/templates",
     "debug": "./scripts/debug",
     "dev": "./scripts/dev",
     "flow:status": "flow status; test $? -eq 0 -o $? -eq 2",
     "flow:stop": "flow stop",
-    "flow:watch": "yarn run flow:status && chokidar './app/**/*.js' './app/**/*.jsx' './tests/**/*.js' -c 'yarn run flow:status'",
+    "flow:watch": "npm run flow:status && chokidar './app/**/*.js' './app/**/*.jsx' './tests/**/*.js' -c 'npm run flow:status'",
     "frontend:build": "./scripts/frontend-build",
     "frontend:watch": "./scripts/frontend-watch",
     "pm2:delete": "pm2 delete config/pm2/production.json",
@@ -172,6 +172,6 @@
     "test:coverage": "./scripts/test-coverage",
     "test:lint": "./scripts/test-lint",
     "test:watch": "./scripts/test-watch",
-    "watch": "yarn run clean && yarn run frontend:watch & yarn run backend:watch"
+    "watch": "npm run clean && npm run frontend:watch & npm run backend:watch"
   }
 }
