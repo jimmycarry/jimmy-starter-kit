@@ -12,13 +12,14 @@ class HomePage extends React.Component {
 
     componentWillMount() {
         // this.props.homePageStart('Start');
-        this.props.setWidthAndHeight({ width: window.document.documentElement.clientWidth,
-            height: window.document.documentElement.clientHeight });
+        
     }
 
     handleClick = () => {
         this.props.homePageStart('Start');
         browserHistory.push('/static-page');
+        this.props.setWidthAndHeight({ width: window.document.documentElement.clientWidth,
+            height: window.document.documentElement.clientHeight });
     }
 
     render() {
