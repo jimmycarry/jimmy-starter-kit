@@ -15,7 +15,7 @@ class HomePage extends React.Component {
 
     handleClick = () => {
         this.props.homePageStart('Start');
-       // browserHistory.push('/static-page');
+        browserHistory.push('/static-page');
     }
 
     render() {
