@@ -3,6 +3,7 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { selector } from './selectors';
 import * as Action from './actions';
+import * as globalAction from '../../global/actions';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -11,6 +12,8 @@ class HomePage extends React.Component {
 
     componentWillMount() {
         // this.props.homePageStart('Start');
+        this.props.setWidthAndHeight({ width: window.document.documentElement.clientWidth,
+            height: window.document.documentElement.clientHeight });
     }
 
     handleClick = () => {
@@ -22,7 +25,8 @@ class HomePage extends React.Component {
         return (
             <div>
                 <h1>Home Page</h1>
-                <a onClick={this.handleClick}>{this.props.welcome}</a>
+                <a onClick={this.handleClick}>static-page</a>
+                <p>{this.props.welcome}</p>
             </div>
         );
     }
@@ -30,5 +34,6 @@ class HomePage extends React.Component {
 }
 
 export default connect(selector, {
-    homePageStart: Action.homePageStart
+    homePageStart: Action.homePageStart,
+    setWidthAndHeight: globalAction.setWidthAndHeight
 })(HomePage);

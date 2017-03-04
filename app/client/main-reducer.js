@@ -2,6 +2,7 @@ import { combineReducers } from 'redux-immutable';
 import Immutable from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import { mountPoint } from './components/routing/logic-bundle';
+import global from './components/global/reducers';
 import HomePage from './components/containers/home-page/reducers';
 
 const initialState = Immutable.fromJS({
@@ -18,5 +19,6 @@ function routingReducer(state = initialState, action) {
 export default combineReducers({
   // [todosMountPoint]: todosReducer,
   [mountPoint]: routingReducer,
-  HomePage
+  HomePage,
+  global
 });
