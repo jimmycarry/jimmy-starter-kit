@@ -10,7 +10,7 @@ Additionally, this will be the boilerplate for koa isomorphic (or universal) app
 So far, I manage to put together these following technologies:
 
 * [Koa.js](https://github.com/koajs/koa)
-* [Webpack](https://github.com/webpack/webpack)
+* [Webpack2](https://github.com/webpack/webpack)
 * [Babel](https://babeljs.io/)
 * [Flowtype](http://flowtype.org/)
 * [Marko](http://markojs.com/)
