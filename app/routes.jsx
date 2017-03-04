@@ -16,7 +16,7 @@ const selectLocationState = () => {
             prevRoutingStateJS = routingState.toJS();
         }
 
-        return prevRoutingStateJS;
+        return prevRoutingStateJS; 
     };
 };
 
