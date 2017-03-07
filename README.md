@@ -43,27 +43,27 @@ Binds root component to `<div id='app'></div>`, and prepopulate redux store with
 ```bash
 $ git clone http://192.168.31.49:3000/yezhiming/koa-react-server.git
 $ cd koa-react-server
-$ yarn install
+$ npm install
 ```
 
 ### 热更新
 
 ```bash
-$ yarn run watch
-$ yarn run dev
+$ npm run watch
+$ npm run dev
 ```
 
 ### 服务端渲染模式
 
 ```bash
-$ SERVER_RENDERING=true yarn run watch
-$ yarn run dev
+$ SERVER_RENDERING=true npm run watch
+$ npm run dev
 ```
 
 ### 全局开启类型检测
 ```bash
-$ yarn run flow:watch
-$ yarn run flow:stop # to terminate the server
+$ npm run flow:watch
+$ npm run flow:stop # to terminate the server
 ```
 
 你可以局部使用类型检查 在文件头部添加 (`// @flow`)
@@ -72,16 +72,16 @@ $ yarn run flow:stop # to terminate the server
 ## 测试
 
 ```bash
-$ yarn test
-$ yarn run test:watch
-$ yarn run test:lint
-$ yarn run test:coverage
+$ npm test
+$ npm run test:watch
+$ npm run test:lint
+$ npm run test:coverage
 ```
 
 ## 调试
 ```bash
-$ yarn run watch
-$ yarn run debug
+$ npm run watch
+$ npm run debug
 ```
 
 webstorm的调试模式
@@ -104,16 +104,16 @@ webstorm的调试模式
 ###不使用pm2
 
 ```bash
-$ yarn run build
-$ SECRET_KEY=your_env_key yarn start
+$ npm run build
+$ SECRET_KEY=your_env_key npm start
 ```
 
 ### 使用pm2
 
 ```bash
-$ yarn run build
-$ SECRET_KEY=your_env_key yarn run pm2:start
-$ yarn run pm2:stop # to terminate the server
+$ npm run build
+$ SECRET_KEY=your_env_key npm run pm2:start
+$ npm run pm2:stop # to terminate the server
 ```
 
 ### 使用docker 网速慢 部署需要多试几次
