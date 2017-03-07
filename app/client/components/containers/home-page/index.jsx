@@ -27,7 +27,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Home Page</h1>
+                <h1>Home Pages</h1>
                 <a onClick={this.handleClick}>static-page</a>
                 <p>{this.props.welcome}</p>
             </div>
