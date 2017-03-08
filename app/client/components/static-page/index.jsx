@@ -1,15 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { compose } from 'recompose';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
+import fetchDataEnhancer from '../../helpers/fetch-data-enhancer';
+import * as Actions from './actions';
+import { selector } from './selectors';
 
-const StaticPage = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-md-12">
-        <h1>Static Page</h1>
-        <Link to="/">Back to Home page</Link>
-      </div>
-    </div>
+export const StaticPage = ({ sta, actions }) => (
+  <div>
+    <h1>Static Page</h1>
+    <div>{ sta.get('staticText') }</div>
+    <a onClick={() => actions.fetchStaicText()}>home</a>
   </div>
 );
 
-export default StaticPage;
+export const enhance = compose(
+  fetchDataEnhancer(
+    ({ store }) => store.dispatch(Actions.fetchStaicText())
+  ),
+  connect(selector, dispatch => ({
+    actions: bindActionCreators({
+      fetchStaicText: Actions.fetchStaicText
+    }, dispatch)
+  }))
+);
+
+export default enhance(StaticPage);
