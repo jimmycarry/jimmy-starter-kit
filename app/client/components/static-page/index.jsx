@@ -11,7 +11,7 @@ export const StaticPage = ({ sta, actions }) => (
   <div>
     <h1>Static Page</h1>
     <div>{ sta.get('staticText') }</div>
-    <a onClick={() => actions.fetchStaicText()}>home</a>
+    <a onClick={() => browserHistory.push('/')}>home</a>
   </div>
 );
 
