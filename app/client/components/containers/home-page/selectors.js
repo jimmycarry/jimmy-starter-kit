@@ -1,9 +1,11 @@
 import { createSelector } from 'reselect';
 
 export const homeSelect = state => state.get('HomePage');
+export const globalSelect = state => state.get('global');
 
-export const selector = createSelector(homeSelect, (home) => {
+export const selector = createSelector(homeSelect, globalSelect, (home, global) => {
     return {
-        welcome: home.get('welcome')
+        home,
+        global
     };
 });

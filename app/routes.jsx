@@ -3,31 +3,20 @@ import { browserHistory, createMemoryHistory, Router, Route } from 'react-router
 import { syncHistoryWithStore } from 'react-router-redux';
 import StaticPage from './client/components/static-page';
 import HomePage from './client/components/containers/home-page';
-
-const selectLocationState = () => {
-    let prevRoutingState;
-    let prevRoutingStateJS;
-
-    return (state) => {
-        const routingState = state.get('routing');
-        // or state.route
-        if (!routingState.equals(prevRoutingState)) {
-            prevRoutingState = routingState;
-            prevRoutingStateJS = routingState.toJS();
-        }
-
-        return prevRoutingStateJS; 
-    };
-};
+// import Todos from './client/components/todos/index';
 
 export const getClientHistory = (store) =>
   syncHistoryWithStore(browserHistory, store, {
-    selectLocationState: selectLocationState()
+    selectLocationState(state) {
+      return state.get('routing').toJS();
+    }
   });
 
 export const getServerHistory = (store, url) =>
   syncHistoryWithStore(createMemoryHistory(url), store, {
-    selectLocationState: selectLocationState()
+    selectLocationState(state) {
+      return state.get('routing').toJS();
+    }
   });
 
 export const getRoutes = (history) => (

@@ -1,15 +1,16 @@
 import { fromJS } from 'immutable';
 import * as Actions from './actions';
 
-const initalState = {
+const initialState = {
+    configVO: {},
     userVO: {},
-    configVO: {}
 };
 
-export default (state = fromJS(initalState), action) => {
+export default (state = fromJS(initialState), action) => {
     switch (action.type) {
-        case Actions.SET_WIDTH_AND_HEIGHT:
-            return state.updateIn(['configVO'], x => x.merge(action.data));
+        case Actions.GET_CLIENT_WIDTH_HEIGHT:
+            return state.setIn(['configVO', 'width'], action.data.width)
+                .setIn(['configVO', 'height'], action.data.height);
         default:
             return state;
     }

@@ -1,4 +1,8 @@
-import * as ActionUtils from '../../helpers/actionUtil';
+import * as ActioUtils from '../../helpers/actionUtil';
 
-export const SET_WIDTH_AND_HEIGHT = 'SET_WIDTH_AND_HEIGHT';
-export const setWidthAndHeight = (data) => ActionUtils.normalAction(SET_WIDTH_AND_HEIGHT, { data });
+/**
+ * 获取客户端的宽和高
+ */
+export const GET_CLIENT_WIDTH_HEIGHT = 'GET_CLIENT_WIDTH_HEIGHT';
+export const getClientWidthHeigt = (data) => ActioUtils.normalAction(GET_CLIENT_WIDTH_HEIGHT, { data });
+
