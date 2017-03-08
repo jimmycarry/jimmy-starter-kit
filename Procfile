@@ -1,1 +1,1 @@
-web: SECRET_KEY=secret npm run pm2:start
+web: SECRET_KEY=secret npm run start
