@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose } from 'recompose';
+import { compose, onlyUpdateForKeys } from 'recompose';
 import { bindActionCreators } from 'redux';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
@@ -38,7 +38,8 @@ export const enhance = compose(
                 getClientWidthHeight: global.getClientWidthHeight,
             }, dispatch),
         })
-    )
+    ),
+    onlyUpdateForKeys(['home', 'global'])
 );
 
 export default enhance(HomePage);
