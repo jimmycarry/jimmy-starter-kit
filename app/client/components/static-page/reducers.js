@@ -9,7 +9,6 @@ const initialState = {
 
 export default handleActions({
     [Action.SET_STATIC_TEXT]: (state, { payload: data }) => {
-        // console.log(data);
         return state.set('staticText', data.text);
     }
 }, fromJS(initialState));

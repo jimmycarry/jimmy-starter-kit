@@ -2,9 +2,9 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import { serverFetchData } from 'client/helpers/fetch-data';
-import configureStore from 'client/main-store';
-import App from 'client/components/main/app.jsx';
+import { serverFetchData } from '../../client/helpers/fetch-data';
+import configureStore from '../../client/main-store';
+import App from '../../client/components/main/app.jsx';
 // import { fromJS } from 'immutable';
 
 let routesModule = require('./../../routes.jsx');
@@ -17,6 +17,7 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
 }
 
 export default async (ctx: Object, next: Function) => {
+  console.log(process.env.SERVER_RENDERING);
   if (process.env.SERVER_RENDERING) {
     ctx.prerender = (template: string, parameters: Object = {}, initialState: Object = {}) => {
       const store = configureStore(initialState);
@@ -38,6 +39,7 @@ export default async (ctx: Object, next: Function) => {
                 );
                 const prerenderData = store.getState().toJS();
 
+                console.log(prerenderData);
                 ctx.render(template, {
                   ...parameters,
                   prerenderComponent,

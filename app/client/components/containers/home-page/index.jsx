@@ -12,15 +12,16 @@ import styles from './index.css';
 export const HomePage = ({ home, global, actions }) => (
     <div className={`${styles.container}`}>
         <h1>Home Page</h1>
-        <a onClick={() => { browserHistory.push('/static-page'); }}>welcome</a>
+        <a onClick={() => { browserHistory.push('/static-page'); } }>welcome</a>
         <p>{home.get('loading')}</p>
         <ul>
             {home.get('list').map((item, index) => {
                 return (
-                    <li key={index}>{item.get('text')}</li>  
+                    <li key={index}>{item.get('text')}</li>
                 );
-            })}    
+            })}
         </ul>
+        <a onClick={() => { browserHistory.push('/high-page'); } }>high-page</a>
     </div>
 );
 
