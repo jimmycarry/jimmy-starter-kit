@@ -21,7 +21,7 @@ export const HomePage = ({ home, global, actions }) => (
                 );
             })}
         </ul>
-        <a onClick={() => { browserHistory.push('/high-page'); } }>high-page</a>
+        <a onClick={() => { browserHistory.push('/high-page') } }>high-page</a>
     </div>
 );
 
