@@ -14,7 +14,7 @@ export const getClientHistory = (store) =>
   });
 
 export const getServerHistory = (store, url) =>
-  syncHistoryWithStore(browserHistory, store, {
+  syncHistoryWithStore(createMemoryHistory(url), store, {
     selectLocationState(state) {
       return state.get('routing').toJS();
     }
