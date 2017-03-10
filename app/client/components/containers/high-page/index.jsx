@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { compose } from 'recompose';
-import {bindActionCreators} from 'redux';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { provideHooks } from 'redial';
 import { browserHistory } from 'react-router';
@@ -10,14 +10,12 @@ import * as Actions from './actions';
 
 const hooks = {
     fetchData: (...args) => {
-        
-        const {store} = args[0];
+        const { store } = args[0];
         store.dispatch(Actions.fetchText());
-        
     },
 };
 
-class HighPage extends React.Component{
+class HighPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -34,13 +32,13 @@ class HighPage extends React.Component{
                 <h1>HighPage</h1>
                 <p>测试Recomse的稳定性</p>
                 <p>{this.props.recomposeText.get('text')}</p>
-                <a onClick={()=>browserHistory.push('/')}>返回</a>
+                <a onClick={() => browserHistory.push('/')}>返回</a>
             </div>
         );
     }
 }
 
-let Page = provideHooks(hooks)(HighPage);
+const Page = provideHooks(hooks)(HighPage);
 export default connect(
     selector,
     dispath => ({
