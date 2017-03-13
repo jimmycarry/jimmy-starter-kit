@@ -1,0 +1,10 @@
+:local(.navsider_layout){
+    width: 100px;
+    background: #f4f4f4;
+    min-height: 600px;
+    color:#000;
+    position: fixed;
+    left: 60px;
+    top: 60px; 
+    z-index: 2;
+}

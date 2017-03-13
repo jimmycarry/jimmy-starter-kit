@@ -9,5 +9,4 @@ export const fetchText = () => dispatch =>
         .then(res => res.json())
         .then(res => {
             dispatch(setText(res));
-            console.log(res);
         });

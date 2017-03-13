@@ -1,0 +1,6 @@
+:local(.layout_container){
+    margin:0;
+    position: relative;
+    min-width: 1208px;
+    overflow: hidden;
+}

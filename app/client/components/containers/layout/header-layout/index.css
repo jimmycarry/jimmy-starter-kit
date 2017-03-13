@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:local(.header_layout){
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    top: 0;
+    background: #ffc400;
+    min-width: 1208px;
+}
+:local(.header_title){
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 100%;
+    line-height: 2.0;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0px;
+}

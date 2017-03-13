@@ -6,6 +6,7 @@ import HomePage from './components/containers/home-page/reducers';
 import HighPage from './components/containers/high-page/reducers';
 import global from './components/global/reducers';
 import StaticPage from './components/static-page/reducers';
+import Layout from './components/containers/layout/navsider-layout/navsider-bar/reducers';
 // import handleActions, { mountPoint} from './components/todos/logic-bundle';
 
 const initialState = Immutable.fromJS({
@@ -25,5 +26,6 @@ export default combineReducers({
   HomePage,
   HighPage,
   StaticPage,
+  Layout,
   global
 });

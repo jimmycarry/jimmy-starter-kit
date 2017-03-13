@@ -19,7 +19,6 @@ export const clientFetchData = (history, routes, store) => {
       if (error) {
         navigateTo('/500.html');
       } else if (redirectLocation) {
-        console.log(redirectLocation);
         navigateTo(redirectLocation.pathname + redirectLocation.search);
       } else if (renderProps) {
         if (!isEmpty(window.prerenderData)) {

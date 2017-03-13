@@ -1,0 +1,10 @@
+:local(.main_layout){
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+}
+:local(.main_layout_container){
+    margin: auto;
+    min-width: 800px;
+    width: 800px;   
+}

@@ -18,7 +18,6 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
 }
 
 export default async (ctx: Object, next: Function) => {
-  console.log(process.env.SERVER_RENDERING);
   if (process.env.SERVER_RENDERING) {
     ctx.prerender = (template: string, parameters: Object = {}, initialState: Object = {}) => {
       const store = configureStore(initialState);
@@ -41,8 +40,7 @@ export default async (ctx: Object, next: Function) => {
                 const prerenderData = store.getState().toJS();
 
                 Helmet.rewind();
-
-                console.log(prerenderData);
+                
                 ctx.render(template, {
                   ...parameters,
                   prerenderComponent,
