@@ -5,7 +5,7 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { serverFetchData } from '../../client/helpers/fetch-data';
 import configureStore from '../../client/main-store';
-import App from '../../client/components/main/app.jsx';
+import App from '../../client/com/main/app';
 // import { fromJS } from 'immutable';
 
 let routesModule = require('./../../routes.jsx');

@@ -107,6 +107,7 @@
     "chokidar": "^1.6.1",
     "chokidar-cli": "^1.2.0",
     "enzyme": "^2.7.1",
+    "es6-promise": "^4.1.0",
     "eslint-watch": "^2.1.14",
     "flow-bin": "^0.38.0",
     "istanbul": "^1.0.0-alpha.2",

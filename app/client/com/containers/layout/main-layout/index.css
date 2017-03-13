@@ -6,5 +6,6 @@
 :local(.main_layout_container){
     margin: auto;
     min-width: 800px;
-    width: 800px;   
+    width: 800px;
+    margin-left: 200px;   
 }

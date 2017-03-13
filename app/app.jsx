@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './client/components/main/app';
+import App from './client/com/main/app';
 import configureStore from './client/main-store';
 import { clientFetchData } from './client/helpers/fetch-data';
 import { getRoutes, getClientHistory } from './routes';

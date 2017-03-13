@@ -10,7 +10,7 @@ export default ({ children }) => (
         <HeaderLayout />
         <NavsiderLayout>
             <NavsiderBar />
-        </NavsiderLayout>
+        </NavsiderLayout>    
         <MainLayout>
             {children}
         </MainLayout>
