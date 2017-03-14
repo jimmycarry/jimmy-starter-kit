@@ -100,14 +100,14 @@
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
     "webpack-isomorphic-tools": "^2.6.6",
-    "webpack-node-externals": "^1.5.4"
+    "webpack-node-externals": "^1.5.4",
+    "es6-promise": "^4.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chokidar": "^1.6.1",
     "chokidar-cli": "^1.2.0",
     "enzyme": "^2.7.1",
-    "es6-promise": "^4.1.0",
     "eslint-watch": "^2.1.14",
     "flow-bin": "^0.38.0",
     "istanbul": "^1.0.0-alpha.2",
