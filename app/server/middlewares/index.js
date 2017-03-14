@@ -40,6 +40,21 @@ export const apiLayer = (app, apiRoutes) => {
   return newRouter;
 };
 
+export const newsContentLayer = (app, newsRoutes) => {
+  const newsRouter = router();
+  
+  newsRouter.use(
+    convert(cors())
+  );
+
+  newsRoutes(newsRouter);
+
+  app.use(newsRouter.routes())
+    .use(newsRouter.allowedMethods());
+  
+  return newsRouter;
+};
+
 export const assetsLayer = app => {
   if (!process.env.SERVER_STATIC_ASSETS) {
     const staticAssets = require('koa-static');

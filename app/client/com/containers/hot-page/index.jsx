@@ -6,9 +6,18 @@ import fetchDataEnhancer from '../../../helpers/fetch-data-enhancer';
 import { selector } from './selectors';
 import * as Actions from './actions';
 
-export const HotPage = () => {
+export const HotPage = ({ newsList }) => {
     return (
-        <div>热点</div>);
+        <div>
+            <ul>
+                {newsList.map((item, index) => {
+                    return (<li key={index}>
+                        {item.get('title')}    
+                    </li>);
+                })}
+            </ul>
+        </div>
+    );
 };
 
 export const enhance = compose(

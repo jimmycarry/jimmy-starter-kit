@@ -11,7 +11,7 @@ export default handleActions({
         return state;
     },
     [Actions.FETCH_HOT[1]]: (state, { payload: data }) => {
-        return state.set('newsList', data);
+        return state.set('newsList', fromJS(data));
     },
     [Actions.FETCH_HOT[2]]: (state, { payload: data }) => {
         return state;

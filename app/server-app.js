@@ -3,12 +3,13 @@ import {
   loggingLayer,
   initialLayer,
   apiLayer,
+  newsContentLayer,
   securityLayer,
   assetsLayer,
   renderLayer,
   errorLayer,
 } from './server/middlewares';
-import apis from './server/apis/base';
+import apis, { newsRoute } from './server/apis/base';
 import controllers from './server/controllers/base';
 
 const app = new Koa();
@@ -17,9 +18,11 @@ const app = new Koa();
 loggingLayer(app);
 initialLayer(app);
 apiLayer(app, apis);
+newsContentLayer(app, newsRoute);
 assetsLayer(app);
 securityLayer(app);
 renderLayer(app, controllers);
 errorLayer(app);
+
 
 export default app;
