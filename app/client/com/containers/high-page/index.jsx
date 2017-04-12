@@ -11,7 +11,7 @@ import * as Actions from './actions';
 const hooks = {
     fetchData: (...args) => {
         const { store } = args[0];
-        store.dispatch(Actions.fetchText());
+        // store.dispatch(Actions.fetchText());
     },
 };
 
@@ -23,7 +23,7 @@ class HighPage extends React.Component {
     }
     componentWillMount() {
         // console.log(this.props);
-        // this.props.actions.fetchText();
+        this.props.actions.fetchText();
     }
 
     render() {
